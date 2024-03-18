@@ -29,6 +29,7 @@ search_params.some((parm)=>
 data[parm].toString().toLowerCase().includes(Search)
 ))
   }
+  console.log(search);
 
   return (
     <div className="row">
@@ -41,6 +42,7 @@ data[parm].toString().toLowerCase().includes(Search)
             class="form-control"
             value={products.name}
             onChange={handleChange}
+            required 
           />
           <label class="form-label">Image</label>
           <input
@@ -49,6 +51,7 @@ data[parm].toString().toLowerCase().includes(Search)
             class="form-control"
             value={products.image}
             onChange={handleChange}
+            required
           />
           <label class="form-label">Price</label>
           <input
@@ -65,6 +68,7 @@ data[parm].toString().toLowerCase().includes(Search)
             class="form-control"
             value={products.description}
             onChange={handleChange}
+            required
           />
           <button type="button" class="btn btn-primary" onClick={handleSubmit}>
             Submit
